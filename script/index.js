@@ -5,7 +5,7 @@ console.log("Hello world");
 console.log("EXERCISE 2:");
 let firstName = "Navyasri";
 let lastName = "Aripineni";
-let age = "30";
+let age = 30 ;
 let favouriteColor = "Blue";
 
 console.log(`My first name is ${firstName}`);
@@ -19,10 +19,10 @@ console.log("EXERCISE 3:");
 let x = 450;
 let y = 50;
 
-add = x+y;
-subtract = x-y;
-multiply = x*y
-divide = x/y
+let add = x+y;
+let subtract = x-y;
+let multiply = x*y
+let divide = x/y
 
 
 console.log(`x = ${x}`);
