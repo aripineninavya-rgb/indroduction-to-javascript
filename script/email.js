@@ -1,13 +1,40 @@
-console.log("assignment 3: Price tag");
+console.log("assignment 3:");
+console.log("Verifying email.id and password");
 
-let username = prompt("Enter your email");
+let email = prompt("Enter your email");
 
-function isValidEmail(username){
-    return username.includes("@gmail.com") ? "Valid email" : "invalid email";
+function isValidEmail(email){
+    return email.includes("@") ? "Valid email" : "invalid email";
 };
 
-console.log (isValidEmail(username));
+console.log(email);
+console.log (isValidEmail(email));
 
+
+let username = prompt("Enter your username");
+
+
+console.log(username);
+
+
+let password = prompt("Enter your password");
+
+function isValidPassword(password, username) {
+    if (password.length <= 8){
+        return "invalid";
+    } 
+    if (password.includes(" ")){
+        return "invalid";
+    }
+    if (password.includes(username)){
+        return "invalid";
+    }
+    return "valid password";
+}
+
+
+console.log (password);
+console.log (isValidPassword(password));
 
 
 
