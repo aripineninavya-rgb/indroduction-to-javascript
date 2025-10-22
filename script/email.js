@@ -20,7 +20,7 @@ console.log(username);
 let password = prompt("Enter your password");
 
 function isValidPassword(password, username) {
-    if (password.length <= 8){
+    if (password.length < 8){
         return "invalid";
     } 
     if (password.includes(" ")){
