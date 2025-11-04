@@ -1,9 +1,5 @@
 
 
-
-
-
-
 function generateRandomArray(length){
 let number = [];
 for (let i = 0; i <= length; i++){
@@ -13,7 +9,7 @@ for (let i = 0; i <= length; i++){
 }
 return number;
 }
-let array = generateRandomArray(15);
+let array = generateRandomArray(10);
 console.log(array);
 
 
