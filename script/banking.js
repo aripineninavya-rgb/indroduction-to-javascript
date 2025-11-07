@@ -8,7 +8,7 @@ const account = {
     },
 
     deposit: function (){
-        const depositAmount = parseFloat(prompt("Enter the amount to deposit"));;
+        const depositAmount = parseFloat(prompt("Enter the amount to deposit"));
         if (depositAmount <= 0){
             console.log ("it is an invalid amount");
         }else{
@@ -32,7 +32,7 @@ const account = {
     },
 
     
-    accountError: function(){
+    accountNumber: function(){
         const accountNumber = prompt("Enter the 8 digit account number");
         if (accountNumber.length !== 8 || accountNumber.includes(" ")){
         alert("Invali account number");
@@ -43,11 +43,15 @@ const account = {
 
     exitAccount: function(){
       console.log ("Goodbye! See you later");  
+    },
+
+    accountError: function(){
+        
     }
 };
 
 function atm() {
-    const select = parseFloat(prompt("Select the choice 1.) Balance 2.)Deposit 3.)Withdrawl 4.)Account Name 5.)Exit"));
+    const select = parseFloat(prompt("Select the choice 1.) Balance 2.)Deposit 3.)Withdrawl 4.)Account Name 5.) accountNumber 6.)Exit"));
     switch(select){
         case 1:
             account.getBalanceAmount();
@@ -62,6 +66,9 @@ function atm() {
             account.getAccountName();
             break;
         case 5:
+            account.accountNumber();
+            break;
+        case 6:
             account.exitAccount();
             return;
         default: 
