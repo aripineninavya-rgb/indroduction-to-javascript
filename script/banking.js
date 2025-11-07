@@ -1,3 +1,15 @@
+let accountNumber;
+
+    function accountNumber(){
+        const accountNumber = prompt("Enter the 8 digit account number");
+        if(accountNumber.length !== 8 || accountNumber.includes(" ")){
+        prompt("Invali account number");
+        }else {
+            console.log("Valid account number");
+        }
+    }
+
+
 const account = {
     accountName: "Navyasri Aripineni",
     balanceAmount: 10000,
@@ -31,21 +43,13 @@ const account = {
         console.log (`Account holder ${this.accountName}`);
     },
 
-    
-    accountNumber: function(){
-        const accountNumber = prompt("Enter the 8 digit account number");
-        if (accountNumber.length !== 8 || accountNumber.includes(" ")){
-        alert("Invali account number");
-        }else {
-            console.log("Valid account number");
-        }
-    },
 
     exitAccount: function(){
       console.log ("Goodbye! See you later");  
     },
 
-    accountError: function(){
+    accountError: function(message = "its not a valid choice! please try again"){
+        console.log(`Error ${message}` )
         
     }
 };
