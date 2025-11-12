@@ -40,49 +40,56 @@ const account = {
     accountNumber: function(){
         const accountNumber = prompt("Enter the 8 digit account number(12345678)");
         if(accountNumber.length !== 8 || accountNumber.includes(" ")){
-        prompt("Invali account number");
+        alert("Invalid account number");
         }else {
             console.log("Valid account number");
         }
     },
 
     exitAccount: function(){
-      console.log ("Goodbye! See you later");  
+      alert ("Goodbye! See you later");  
     },
 
     accountError: function(message = "its not a valid choice! please try again"){
-        console.log(`Error ${message}` )
+        alert(`Error ${message}` )
         
     }
 };
 
 function atm() {
+
+    let runing = true;
+
+    while(runing){
     const select = parseFloat(prompt("Select the choice 1.) Balance 2.)Deposit 3.)Withdrawl 4.)Account Name 5.) accountNumber 6.)Exit"));
-    switch(select){
-        case 1:
-            account.getBalanceAmount();
-            break;
-        case 2:
-            account.deposit();
-            break;
-        case 3:
-            account.withDrawl();
-            break;
-        case 4:
-            account.getAccountName();
-            break;
-        case 5:
-            account.accountNumber();
-            break;
-        case 6:
-            account.exitAccount();
-            return;
-        default: 
-            account.accountError();
+    
+        switch(select){
+            case 1:
+                account.getBalanceAmount();
+                break;
+            case 2:
+                account.deposit();
+                break;
+            case 3:
+                account.withDrawl();
+                break;
+            case 4:
+                account.getAccountName();
+                break;
+            case 5:
+                account.accountNumber();
+                break;
+            case 6:
+                account.exitAccount();
+                runing = false;
+                break;
+            default: 
+                account.accountError();
+        }
     }
 
 }
-atm()
+atm();
 
 
 
