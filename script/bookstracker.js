@@ -59,7 +59,7 @@ function listOfBooks(){
 
         switch(choice){
             case "1":
-                thisaddBook();
+                addBook();
                 break;
             case "2":
             bookList();
