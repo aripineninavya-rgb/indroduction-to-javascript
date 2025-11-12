@@ -58,17 +58,17 @@ function listOfBooks(){
             Enter your choice:`);
 
         switch(choice){
-            case 1:
+            case "1":
                 thisaddBook();
                 break;
-            case 2:
+            case "2":
             bookList();
                 break;
-            case 3:
+            case "3":
                 const title = prompt("Enter the title of book which want to be marked as read");
                 markedAsRead(title);
                 break;
-            case 4:
+            case "4":
                 runing = false;
                 alert ("Goodbye");
                 break;
